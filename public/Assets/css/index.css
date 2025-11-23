@@ -1,0 +1,337 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+background: linear-gradient(320deg, #000 0%, #000 75%, #0f1626 100%);
+}
+.header{
+    width: 100%;
+    height: 100px;
+    background-color:transparent;
+    color: #f1f1f1;
+}
+.navbar{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self:center;
+    gap: 10%;
+    padding-top:5%;
+    position: fixed;
+}
+.btns{
+   width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.logs{
+   
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.title{
+    padding-left: 20px;
+}
+
+.btn_defeat{
+    padding: 10px 10px;
+    background-color: transparent;
+    border: none;
+    color: #f1f1f1;
+}
+.Registro{
+    padding: 10px 10px;
+    background-color: #1447e6;
+     border: none;
+     color: #f1f1f1;
+     border-radius: 5px;
+}
+.Registro:hover{
+     background-color: #0e3bc1;
+}
+
+main{
+    height: auto -100vh;
+
+}
+.consultas{
+    width: 100%;
+    height: 85vh;
+    color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+
+}
+.consultas-element-one{
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 3% 3%;
+}
+
+.consultas-element-two{
+    text-align: center;
+    font-size: 30px;
+    color: #f1f1f1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 4%;
+}
+.selectores{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.form{
+   width: auto;
+    height: auto;
+    padding: 4% 7%;
+    display: flex;
+    flex-direction: column;
+    background-color: #101828;
+    border-radius: 10px;
+}
+.tikets{
+    color: #99a1af;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+.options{
+    width: 300px;
+    height: 50px;
+    background-color: #000;
+    color: #dfdfe0;
+    border: 0.5px solid #ffffff;
+   border-radius: 5px;
+}
+.options:focus{
+    border: 3px solid #1449e66e;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #1449e69d;
+}
+.contend-inputs{
+    width: auto;
+    height: auto;
+    padding: 4% 7%;
+    display: flex;
+    flex-direction: row;
+    gap: 15%;
+    background-color: #101828;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    
+}
+.submit{
+    padding: 15px 0px;
+    background-color: #1447e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight:500;
+    }
+
+.submit:hover{
+    background-color: #0e3bc1;
+}
+.provedoresDestacados{
+    width: 100%;
+    padding: 30px 0;
+    background-color: #101828; 
+    text-align: center;
+    
+}
+.carrusel{
+    display: flex;
+    gap:8%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; 
+    padding: 20px;
+    scroll-behavior: smooth;  
+}
+.carrusel::-webkit-scrollbar{
+    display: none;
+}
+
+
+.provedores{
+    flex: 0 0 calc(30% - 20px);  /* Muestra 3 tarjetas */
+    height: 350px;
+    background: #000;
+    color: #fff;
+    border-radius: 10px;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px; 
+    justify-content: start;
+     
+}
+.provedores:hover{
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+    border: 1px solid #1449e6;
+}
+.nombre-provedor{
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 3%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  
+}   
+.titleProvedores{
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  
+}
+.calificacion-provedor{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 5%;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  
+}
+.img-provedor{
+    width:40%;
+    height: 150px;
+    border-radius: 50%;
+}
+.categoria-provedor{
+    font-size: 16px;
+    font-weight: 500;
+    color: #cbc2c2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    padding-bottom: 3%; 
+
+}   
+.precio-provedor{
+    font-size: 16px;
+    font-weight: 500;
+    color: #152de5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  
+}
+
+.zonas{
+    width: 100%;
+    height: auto;
+    padding: 3% 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorZonas{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: row;    
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    flex-wrap: wrap;
+}
+
+.area{
+    width: 30%;
+   height: auto;
+   padding:3% 3% ;
+   background-color: #101828;
+   border-radius: 10px;
+   border: 1px solid hsl(219, 45%, 16%);
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;   
+    font-size: 13px;
+    text-align: center; 
+    margin:3% 0%;
+
+}
+.count{
+    margin-top: 3%;
+}
+
+
+@media screen and (max-width: 767px) {
+    .navbar{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+        position: relative;
+    }
+    .consultas-element-two{
+        font-size: 25px;
+        padding: 1% 1%;
+    }
+    .btns{
+        margin-top: 3%;
+    }
+    .contend-inputs{
+        flex-wrap: wrap;
+    }
+    .form{
+        padding: 1% 1%;
+    }
+    .provedores{
+    flex: 0 0 calc(50% - 10px);  /* Muestra 3 tarjetas */
+    height: 250px;
+    background: #000;
+    color: #fff;
+    border-radius: 10px;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; 
+    justify-content: start;
+}
+    .provedoresDestacados{
+        padding: 20px 0;
+    }
+    .carrusel{
+        gap: 15%;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth
+    }
+    .img-provedor{
+    width:70%;
+    height: 100px;
+    border-radius: 50%;
+}
+.area{
+    width: 100%;
+    flex-direction: column;
+}
+
+    }
