@@ -18,9 +18,9 @@
                 <p class="title">SkillZone</p>
             </span>
             <span class="btns">
-                <a href=""><Button class="btn_defeat">Explorar Provedores</Button></a>
-                <a href=""><Button class="btn_defeat">Iniciar Sessión</Button></a>
-                <a href=""><Button class="Registro">Registrarse</Button></a>
+                <a href="index.php?ruta=home"><Button class="btn_defeat">Explorar Provedores</Button></a>
+                <a href="index.php?ruta=login"><Button class="btn_defeat">Iniciar Sessión</Button></a>
+                <a href="index.php?ruta=registro"><Button class="Registro">Registrarse</Button></a>
             </span>
         </nav>
     </header>
@@ -56,7 +56,7 @@
                             <select name="zonas" id="zonas" class="options">
                                 <option value="">Seleccione una zona</option>
 
-                                <?php foreach ($zonas as $zona): ?>
+                                <?php foreach ($zonasCompletas as $zona): ?>
                                     <option value="<?= $zona['id_zona'] ?>">
                                         <?= $zona['zona'] . ' - ' . $zona['ciudad'] ?>
                                     </option>
@@ -71,7 +71,7 @@
             </div>
         </section>
 
-        <!-- SECCIÓN PROVEEDORES DESTACADOS -->
+    
         <section class="provedoresDestacados">
             <p class="titleProvedores">Provedores Destacados</p>
 
@@ -80,7 +80,7 @@
                 <?php foreach ($provedor as $p): ?>
 
                     <?php 
-                    // categoría usando el modelo
+    
                     $class = $provedorModel->ObtenerCategoriaProveedores($p['id_categoria']); 
                     ?>
 
@@ -98,7 +98,7 @@
 
                         <p class="categoria-provedor"><?= $class['categoria'] ?></p>
 
-                        <p class="precio-provedor"><?= $p['precio'] ?> / Hora</p>
+                        <p class="precio-provedor">$<?= $p['precio'] ?> / Hora</p>
                     </div>
 
                 <?php endforeach; ?>
@@ -106,7 +106,6 @@
             </div>
         </section>
 
-        <!-- SECCIÓN ZONAS -->
         <section class="zonas">
             <p class="titleProvedores">Zonas</p>
 
@@ -116,7 +115,8 @@
 
                     <?php 
                     // contar proveedores con el modelo
-                    $count = $zonaModel->ContarProvedores($z['Id_zona']); 
+                    $count = $zonaModel->ContarProvedores($z['id_zona']); 
+                   
                     ?>
 
                     <div class="area">
@@ -127,7 +127,7 @@
                         </svg>
 
                         <p><?= $z['zona'] ?> Ciudad <?= $z['ciudad'] ?></p>
-                        <p class="count"><?= $count ?> Proveedores en esta Área</p>
+                        <p class="count"><?= $count?> Proveedores en esta Área</p>
                     </div>
 
                 <?php endforeach; ?>

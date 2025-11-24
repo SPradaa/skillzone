@@ -14,11 +14,17 @@ class ZonaModel{
         }
 
         public function ContarProvedores($id_zona){
-            $stmt = $this->conn->prepare("SELECT * FROM provedores WHERE id_zona = :id_zona");
-            $stmt->execute(['id-zona' =>$id_zona]);
-            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+ $contador = $this->conn->prepare("SELECT COUNT(*) FROM provedores WHERE id_zona = :id_zona");
+                $contador->execute(['id_zona' => $id_zona]);
+             return  $count = $contador->fetchColumn();
+
         }
 
+        public function ZonasCompletas(){
+            $stmt = $this->conn->prepare("SELECT * FROM zonas");
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
 
 
 

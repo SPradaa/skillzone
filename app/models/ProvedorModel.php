@@ -13,6 +13,12 @@ class ProvedorModel{
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    function ObtenerCategoriaProveedores($id_categoria){
+        $stmt = $this->conn->prepare("SELECT * FROM categorias WHERE id_categoria = :id_categoria");
+        $stmt->execute(['id_categoria' => $id_categoria]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
 }
 
 

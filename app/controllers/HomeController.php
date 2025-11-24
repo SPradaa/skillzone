@@ -23,7 +23,7 @@ class HomeController
 $categorias  = $categoriaModel->obtenerCategorias();
 $zonas = $zonaModel->obtenerZonas();
 $provedor = $provedorModel->ObtenerProvedores();
-
+$zonasCompletas = $zonaModel->ZonasCompletas();
 
 
         include('../app/views/home.php');
